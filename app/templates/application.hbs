@@ -1,0 +1,83 @@
+
+<div class="row">
+        <div class="brandname col-md-2 col-md-offset-2">{{#link-to 'products.index'}}<img src="img/brand.jpg" height="60" width="200">{{/link-to}}</div> 
+    <div class="col-md-3">
+      <form {{action "query"}}>
+            <div class="form-group">
+                        <div class="input-group input-group-sm">
+                            
+                            {{input type="text" class="form-control"  id="searchProduct" placeholder="Search Products" value=searchTerm}}
+
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-sm btn-form">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+     
+    </div>
+     {{#unless currentUser.isAdmin}}
+    <div class="col-md-1">
+       
+        {{#link-to 'cart'}}
+          <button class="btn btn-primary">
+            <span class="glyphicon glyphicon-shopping-cart">
+            </span>
+            <span class="badge" >{{numberOfcartProduct}}
+            </span>
+          </button>
+        {{/link-to}}
+       
+    </div>
+ {{/unless}}
+
+
+  {{#if currentUser.isLogin}}
+  <div class="col-md-1">
+ <li class="dropdown profile">
+              <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" role="button" aria-expanded="false">{{currentUser.userName}} <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                 <li>{{#link-to 'profile'}}My profile{{/link-to}}</li>
+                 {{#if currentUser.isUser}}
+                  <li>{{#link-to 'order'}}My Order{{/link-to}}</li>
+                  {{/if}}
+                  {{#if currentUser.isAdmin}}
+                    <li>{{#link-to 'addproduct'}}Add Product{{/link-to}}</li>
+                  {{/if}}
+
+              </ul>
+          </li>
+       </div>
+       {{/if}}
+
+  {{#if currentUser.isLogin}}
+
+    <div class="col-md-1">
+       
+          <button class="btn btn-primary" {{action 'logout'}}>  
+           Logout
+          </button>
+         
+         {{else}}
+              <button class="btn btn-primary" data-target=".login-modal" data-toggle="modal" >
+              Login
+             </button>
+    </div>
+
+    
+     {{/if}}
+
+   <!-- <div class="col-md-1 signup">
+      <button class="btn btn-primary" data-target=".signup-modal-sm" data-toggle="modal">Signup Now</button>
+    </div> -->
+</div><!-- /.row -->
+
+{{nav-bar currentUser=currentUser}}
+
+{{outlet}}
+
+{{login-modal currentUser=currentUser updateCurrentUserAsAdmin="updateCurrentUserAsAdmin" updateCurrentUserAsUser="updateCurrentUserAsUser"}}
+{{signup-modal}}
+{{nav-footer}}

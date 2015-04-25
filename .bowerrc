@@ -1,0 +1,6 @@
+{
+  "directory": "bower_components",
+  "analytics": false,
+   "proxy": "http://squid.hyd.int.untd.com:3128",
+ "https-proxy": "http://squid.hyd.int.untd.com:3128"
+}

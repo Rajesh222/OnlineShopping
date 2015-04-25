@@ -1,0 +1,102 @@
+<div class="container">
+    <h4>Payment Page</h4>
+ {{#if controllers.application.numberOfcartProduct}}
+ <bold>Delivery Address</bold>
+ <div class=" row">
+
+    <div class="col-md-2">
+   Name: {{user.name}}
+   </div>
+   </div>
+   <div class="row">
+    <div class="col-md-3">
+      Address:{{user.address}}
+   </div>
+ </div>
+
+    <div class="row" id="payable">
+          <div class="col-md-2">
+            {{controllers.application.numberOfcartProduct}} Items
+        </div>
+
+        
+        <div class="col-md-3 ">
+            Amount Payable :
+        </div>
+
+        <div class="col-md-1 ">
+            {{controllers.application.total}}
+
+        </div>
+
+    </div>
+   
+     <form  {{action 'pay' product on="submit" }} class="address">
+            <div class="row">
+              <div class="form-group">
+                 Card Number: {{input value=cardNumber type="number" class="form-control"}}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group">
+
+
+              <div class="col-md-4 selection">
+
+                  Expire On: 
+                   <select class="form-control" id="month">
+                        <option>Month</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                      <select  id="year" class="form-control" >
+                        <option>year</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                      </select>
+                      </div>
+              </div>
+            </div>
+
+                <div class="row">
+              <div class="form-group">
+                 Name on the Card: {{input value=nameOnCard type="text" class="form-control"}}
+              </div>
+            </div>
+
+
+             <div class="row">
+                <button type="submit" class="btn btn-primary">Pay</button>
+             </div>
+            
+  </form>
+   
+    {{/if}}
+
+     
+</div>

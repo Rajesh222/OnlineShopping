@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+
+	{{#each item in product}}
+		{{#unless item.isSoldOut}}
+		<div class="col-md-3 itemList">
+		{{#link-to 'products.product' item.id}}<img class="displayed"{{bind-attr src=item.src}} alt="product" height="200" width="190">{{/link-to}}
+		{{#link-to 'products.product' item.id}}<p class="blocktext">{{item.title}}</p>{{/link-to}}
+		<p class="blocktext">{{item.description}}</p>
+		 {{#if controllers.application.currentUser.isAdmin}}
+		{{#link-to 'editproduct' item }}<button class="btn btn-default blocktext">EDIT</button>{{/link-to}}
+		{{/if}}
+		 {{#if controllers.application.currentUser.isAdmin}}
+		<button class="btn btn-default blocktext" {{action 'deleteProduct' item}}>Delete</button>
+		{{/if}}
+		
+		</div>
+		{{/unless}}
+	{{/each}}
+
+	</div>
+
+</div>

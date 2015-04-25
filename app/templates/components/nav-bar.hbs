@@ -1,0 +1,24 @@
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="collapse-1">
+      <ul class="nav navbar-nav">
+        <li>{{#link-to 'products.index'}}All Products{{/link-to}}</li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">All Categories <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li>{{#link-to 'products.subproduct' (query-params category="electronics")}}Electronics{{/link-to}}</li>
+            <li>{{#link-to 'products.subproduct' (query-params category="books")}}Books{{/link-to}}</li>
+            <li>{{#link-to 'products.subproduct' (query-params category="men")}}Men's wear{{/link-to}}</li>
+            <li>{{#link-to 'products.subproduct' (query-params category="women")}}Women's wear{{/link-to}}</li>
+          </ul>
+        </li>
+        {{#if currentUser.isAdmin}}
+         <li>{{#link-to 'addproduct'}}Add Product{{/link-to}}</li>
+         {{/if}}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

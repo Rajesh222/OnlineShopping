@@ -1,0 +1,59 @@
+<div class="container">
+ {{#if controllers.application.numberOfcartProduct}}
+    <div class="row">
+        <div class="col-md-4 itemList">Product</div>
+        <div class="col-md-4 itemList">Price</div>
+        <div class="col-md-4 itemList">SUBTOTAL</div>
+    </div>
+    {{#each}}
+    <div class="row ">
+        <div class="col-md-2 itemList ">
+            {{#link-to 'products.product' id}}<img {{bind-attr src=src}} alt="product" height="50" width="50">{{/link-to}}
+
+        </div>
+
+        <div class="col-md-2 itemList">
+            <p>{{title}}</p>
+            <p>{{description}}</p>
+
+        </div>
+
+        <div class="col-md-4 itemList">
+            <p>{{price}}</p>
+
+        </div>
+        <div class="col-md-4 itemList">
+            <p>{{price}}</p>
+
+        </div>
+    </div>
+
+    {{/each}}
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-6">
+            TOTAL:
+        </div>
+
+        <div class="col-md-2 ">
+            {{controllers.application.total}}
+
+        </div>
+
+    </div>
+    <div class="row">
+    	 <div class="col-md-2 col-md-offset-5 itemList">
+           {{#link-to "products"}} <button class="btn btn-primary">Continue Shopping</button>{{/link-to}}
+        </div>
+        <div class="col-md-2 itemList">
+            {{#if controllers.application.currentUser.isLogin}}
+              {{#link-to "payment"}} <button class="btn btn-primary">Place Order</button>{{/link-to}}
+            {{else}}
+            {{#link-to "placeorder"}} <button class="btn btn-primary" data-target=".login-modal" data-toggle="modal">Place Order</button>{{/link-to}}
+            {{/if}}
+        </div>    
+    </div>
+    {{else}}
+     <h4> There is no product in cart {{#link-to "products"}} Click Here to see Products{{/link-to}}</h4>
+    {{/if}}
+</div>

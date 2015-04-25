@@ -1,0 +1,16 @@
+
+<div class="container">
+
+        <div class="row ">
+
+            {{#each searchResult}}
+                <div class="col-md-3 itemList ">
+                    {{#link-to 'products.product' id}}<img {{bind-attr src=src}} alt="product" height="50" width="50" {{action 'clearText'}}>{{/link-to}}    
+                    <p>{{title}}</p>
+                    <p>{{description}}</p>
+                </div>  
+            {{/each}}
+
+        </div>
+
+</div>
