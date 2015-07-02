@@ -1,37 +1,46 @@
 <div class="container">
-    <h4>Payment Page</h4>
  {{#if controllers.application.numberOfcartProduct}}
- <bold>Delivery Address</bold>
+ 
+ <div class="row addresshead">
+  <div class="col-md-5 col-md-offset-4 ">
+ <h4>Shipment Address:</h4>
+ </div> 
+ </div>
+ <div class="address">
  <div class=" row">
 
-    <div class="col-md-2">
-   Name: {{user.name}}
+    <div class="col-md-5 col-md-offset-3">
+   <b>Name: </b> {{user.name}}
    </div>
    </div>
    <div class="row">
-    <div class="col-md-3">
-      Address:{{user.address}}
+    <div class="col-md-5 col-md-offset-3">
+      <b>Address: </b>{{user.address}}
    </div>
  </div>
 
     <div class="row" id="payable">
-          <div class="col-md-2">
-            {{controllers.application.numberOfcartProduct}} Items
-        </div>
-
-        
-        <div class="col-md-3 ">
-            Amount Payable :
-        </div>
-
-        <div class="col-md-1 ">
-            {{controllers.application.total}}
-
+          <div class="col-md-6 col-md-offset-3">
+            {{controllers.application.numberOfcartProduct}} Items Ordered
         </div>
 
     </div>
+    <div class="row" id="payable">
+        <div class="col-md-6 col-md-offset-3 ">
+            Amount Payable : Rs. {{controllers.application.total}}
+        </div>
+    </div>
+    </div>
+   <div class="row addresshead">
+    <div class="col-md-5 col-md-offset-4">
+      <h4>Payment Type</h4>
+    </div>
+    </div>
+    <div class="address">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
    
-     <form  {{action 'pay' product on="submit" }} class="address">
+           <form  {{action 'pay' product on="submit" }}>
             <div class="row">
               <div class="form-group">
                  Card Number: {{input value=cardNumber type="number" class="form-control"}}
@@ -39,12 +48,9 @@
             </div>
 
             <div class="row">
-              <div class="form-group">
-
-
-              <div class="col-md-4 selection">
-
-                  Expire On: 
+              Expire On:
+              <div class="form-group">              
+              <div class="col-md-5 selection">                 
                    <select class="form-control" id="month">
                         <option>Month</option>
                         <option value="1">1</option>
@@ -91,11 +97,15 @@
 
 
              <div class="row">
+                <div class="col-md-1 col-md-offset-3">
                 <button type="submit" class="btn btn-primary">Pay</button>
+                </div>
              </div>
             
   </form>
-   
+  </div>
+   </div>
+   </div>
     {{/if}}
 
      

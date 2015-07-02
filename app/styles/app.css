@@ -1,9 +1,10 @@
+
 html, body {
   margin-top: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: #f0efef;
 }
 .brandname{
-margin-left: 228px;
+margin-left: 213px;
 }
 .itemList .blocktext{
 
@@ -18,26 +19,33 @@ img.displayed {
 p.blocktext {
     margin-left: auto;
     margin-right: auto;
-    width: 5em; 
+    width: 10em; 
 }
 button.blocktext {
-    margin-left: auto;
-    margin-right: auto;
-    height: 2em;
-    width: 7em; 
+    height: 2em; 
 }
 .container{
-	padding-left: 130px;
-	padding-right: 130px;
+	background-color: rgb(255, 255, 255);
 	padding-bottom: 50px;
+	width:68%;
+	padding-top: 20px;
+	min-height: 500px;
+}
+.addresshead{
+	background-color: rgb(196, 205, 196);
 }
 .itemList{
 
 	margin-bottom: 30px;
 }
 .address{
+	border-left: 2px solid #d9d7d2;
+	border-right:2px solid #d9d7d2;
+	border-bottom:2px solid #d9d7d2;
+	width:60%;
+	margin-left: 177px;
+	padding-bottom: inherit;
 
-	width:40%;
 }
 
 .navbar{
@@ -50,7 +58,11 @@ button.blocktext {
 
 .navbar-nav{
 
-	margin-left: 182px !important;
+	margin-left: 167px !important;
+}
+.navbar-default{
+
+	margin:auto;
 }
 .navbar-nav > li > a {
 	padding-top:5px !important; 
@@ -58,13 +70,17 @@ button.blocktext {
 }
 
 .navbar-fixed-bottom{
-	
-	background-color: #A69B9B;
+	color:rgb(255, 255, 255);
+	background-color: #0B0B0B;
 }
-
+.upperfooter{
+	background-color: #191919;
+	color:rgb(255, 255, 255);
+	height:200px;
+}
 #payable{
-    color:green;
-	font-size: 20px;
+    color:#6F746F;
+	font-size: 16px;
 	font-style: italic;
 	font-weight: bold;
 	
@@ -77,4 +93,10 @@ button.blocktext {
 	list-style: none;
 	font-size: 15px;
 	
+}
+#carousel-example-generic{
+	width:600px;
+}
+.carousel-inner > .item > img{
+	height:400px;
 }

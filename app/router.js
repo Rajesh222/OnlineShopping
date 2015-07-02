@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('payment');
     this.route('order');
     this.route('profile');
+    this.route('contactus');
     this.route('editproduct', {path: 'editproduct/:product_id'});
     this.resource('products', function(){
     	 this.route('subproduct');

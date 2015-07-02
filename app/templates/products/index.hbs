@@ -6,7 +6,7 @@
 		<div class="col-md-3 itemList">
 		{{#link-to 'products.product' item.id}}<img class="displayed"{{bind-attr src=item.src}} alt="product" height="200" width="190">{{/link-to}}
 		{{#link-to 'products.product' item.id}}<p class="blocktext">{{item.title}}</p>{{/link-to}}
-		<p class="blocktext">{{item.description}}</p>
+		<p class="blocktext">Rs. {{item.price}}</p>
 		 {{#if controllers.application.currentUser.isAdmin}}
 		{{#link-to 'editproduct' item }}<button class="btn btn-default blocktext">EDIT</button>{{/link-to}}
 		{{/if}}

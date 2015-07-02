@@ -19,17 +19,16 @@ export default DS.Model.extend({
 FIXTURES: [{
   id:1,
   category: "books",
-  title:"book1",
+  title:"Mathematics",
   description:" description...",
   price:10,
   src:"img/book1.jpg",
-  isSoldOut: true,
 },
 
 {
   id:2,
   category: "books",
-  title:"book2",
+  title:"Chemistry",
   description:" description...",
   price:10,
   src:"img/book2.jpg",
@@ -38,7 +37,7 @@ FIXTURES: [{
 
 {
   id:3,
-  category: "books",
+  category: "business Studies",
   title:"book3",
   description:" description...",
   price:10,
@@ -48,7 +47,7 @@ FIXTURES: [{
 {
   id:4,
   category: "books",
-  title:"book4",
+  title:"Science",
   description:" description...",
   price:10,
   src:"img/book4.jpg"
@@ -56,7 +55,7 @@ FIXTURES: [{
 {
   id:5,
   category: "books",
-  title:"book5",
+  title:"Sucess Master",
   description:" description...",
   price:10,
   src:"img/book5.jpg"
@@ -64,7 +63,7 @@ FIXTURES: [{
 {
   id:6,
   category: "books",
-  title:"book6",
+  title:"Mathematics Class XI",
   description:" description...",
   price:10,
   src:"img/book6.jpg"
@@ -72,7 +71,7 @@ FIXTURES: [{
 {
   id:7,
   category: "electronics",
-  title:"mobile1",
+  title:"Nokia",
   description:" description...",
   price:6000,
   src:"img/mobile1.jpg"
@@ -81,7 +80,7 @@ FIXTURES: [{
 {
   id:8,
   category: "electronics",
-  title:"mobile2",
+  title:"Samsung",
   description:" description...",
   price:10000,
   src:"img/mobile2.jpg"
@@ -90,7 +89,7 @@ FIXTURES: [{
 {
   id:9,
   category: "electronics",
-  title:"mobile3",
+  title:"Samsung",
   description:" description...",
   price:9000,
   src:"img/mobile3.jpg"
@@ -99,7 +98,7 @@ FIXTURES: [{
 {
   id:10,
   category: "men",
-  title:"men1",
+  title:"shirt balck",
   description:" description...",
   price:900,
   src:"img/men1.jpg"
@@ -107,7 +106,7 @@ FIXTURES: [{
 {
   id:11,
   category: "men",
-  title:"men2",
+  title:"Jacket",
   description:" description...",
   price:900,
   src:"img/men2.jpg"
@@ -115,7 +114,7 @@ FIXTURES: [{
 {
   id:12,
   category: "men",
-  title:"men3",
+  title:"Trouser",
   description:" description...",
   price:900,
   src:"img/men3.jpg"
@@ -123,7 +122,7 @@ FIXTURES: [{
 {
   id:13,
   category: "men",
-  title:"men4",
+  title:"Jeans",
   description:" description...",
   price:900,
   src:"img/men4.jpg"
@@ -131,7 +130,7 @@ FIXTURES: [{
 {
   id:14,
   category: "men",
-  title:"men5",
+  title:"Lining shirt",
   description:" description...",
   price:900,
   src:"img/men5.jpg"
@@ -139,7 +138,7 @@ FIXTURES: [{
 {
   id:15,
   category: "men",
-  title:"men6",
+  title:"Grenn Serwani",
   description:" description...",
   price:900,
   src:"img/men6.jpg"
@@ -147,7 +146,7 @@ FIXTURES: [{
 {
   id:16,
   category: "men",
-  title:"men7",
+  title:"Half shirt",
   description:" description...",
   price:900,
   src:"img/men7.jpg"
@@ -156,7 +155,7 @@ FIXTURES: [{
 {
   id:17,
   category: "women",
-  title:"women1",
+  title:"top",
   description:" description...",
   price:1000,
   src:"img/women1.jpg"
@@ -165,7 +164,7 @@ FIXTURES: [{
 {
   id:18,
   category: "women",
-  title:"women2",
+  title:"skirt",
   description:" description...",
   price:1000,
   src:"img/women2.jpg"
@@ -174,7 +173,7 @@ FIXTURES: [{
 {
   id:19,
   category: "women",
-  title:"women3",
+  title:"pink top",
   description:" description...",
   price:1000,
   src:"img/women3.jpg"
@@ -183,7 +182,7 @@ FIXTURES: [{
 {
   id:20,
   category: "women",
-  title:"women4",
+  title:"Jacket",
   description:" description...",
   price:1000,
   src:"img/women4.jpg"
@@ -192,7 +191,7 @@ FIXTURES: [{
 {
   id:21,
   category: "women",
-  title:"women5",
+  title:"red top",
   description:" description...",
   price:1000,
   src:"img/women5.jpg"
@@ -201,7 +200,7 @@ FIXTURES: [{
 {
   id:22,
   category: "women",
-  title:"women6",
+  title:"red top",
   description:" description...",
   price:1000,
   src:"img/women6.jpg"

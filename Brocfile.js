@@ -19,6 +19,12 @@ var app = new EmberApp();
 app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+app.import('bower_components/jquery/dist/jquery.js');
+app.import('bower_components/jquery/dist/jquery.min.js');
+app.import('bower_components/jquery/dist/jquery.min.map');
+app.import('bower_components/remarkable-bootstrap-notify/dist/bootstrap-notify.js');
+app.import('bower_components/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js');
 app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
 	srcDir: '/',
     destDir: '/fonts'

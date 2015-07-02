@@ -1,11 +1,13 @@
-<h2>Place order</h2>
 <div class="container">
-	<div class="row">
-		      <div class="col-md-3 col-md-offset-2">
-		          <h3>Delivery Address: </h3>
+  <div class="address">
+	<div class="row addresshead">
+		      <div class="col-md-5 col-md-offset-4">
+		          <h3>Shipment Address: </h3>
 		      </div>
 	</div>
-  <form  {{action 'saveAddress' on="submit"}} class="address" >
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+  <form  {{action 'saveAddress' on="submit"}}>
             <div class="row">
               <div class="form-group">
                  Name: {{input value=name type="text" class="form-control"}}
@@ -21,9 +23,13 @@
 
 
              <div class="row">
+                <div class="col-md-4 col-md-offset-2">
                 <button type="submit" class="btn btn-primary">Save and Continue</button>
+                </div>
              </div>
             
   </form>
-
+  </div>
+  </div>
+  </div>
 </div>
